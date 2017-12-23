@@ -5,10 +5,10 @@ mongoose.Promise = global.Promise;
 var UsersSchema = mongoose.Schema({
   id : {type : String, unique: true, required : true},
   passwd : {type : String, required : true},
-  email : {type : String, required : true},
   name : {type : String, required : true},
   token : {type : String},
-  friend_list : {type : String}
+  friend_list : {type : String},
+  isLogined : {type : Boolean, default : true}
 });
 Users = mongoose.model("users", UsersSchema);
 
