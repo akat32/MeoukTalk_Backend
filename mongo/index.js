@@ -7,7 +7,11 @@ var UsersSchema = mongoose.Schema({
   passwd : {type : String, required : true},
   name : {type : String, required : true},
   token : {type : String},
-  friend_list : {type : String},
+  friend_id : {type : String},
+  friend_list : [{
+    name : {type: String},
+    token : {type : String}
+  }],
   isLogined : {type : Boolean, default : true}
 });
 Users = mongoose.model("users", UsersSchema);
