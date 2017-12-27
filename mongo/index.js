@@ -9,8 +9,7 @@ var UsersSchema = mongoose.Schema({
   token : {type : String},
   friend_id : {type : String},
   friend_list : [{
-    name : {type: String},
-    token : {type : String}
+    name : {type: String}
   }],
   isLogined : {type : Boolean, default : true}
 });
