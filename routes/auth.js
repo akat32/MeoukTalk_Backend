@@ -13,7 +13,7 @@ module.exports = (router,Users,rndstring)=>{
     var new_user = new Users(req.body);
     new_user.token = rndstring.generate(33);
     var result = await new_user.save();
-    res.status(200).json({message : "signup success!"});
+    res.status(200).json(new_user.token);
   })
   .get('/signout/:token', async (req,res)=>{
     const token = req.params.token;

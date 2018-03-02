@@ -7,7 +7,6 @@ var UsersSchema = mongoose.Schema({
   passwd : {type : String, required : true},
   name : {type : String, required : true},
   token : {type : String},
-  friend_id : {type : String},
   friend_list : [{
     name : {type: String}
   }],
